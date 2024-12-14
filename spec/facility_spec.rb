@@ -37,6 +37,7 @@ RSpec.describe Facility do
       @facility_1.add_service('Renew Drivers License')
       @facility_1.add_service('Vehicle Registration')
       expect(@facility_1.services).to eq(['New Drivers License', 'Renew Drivers License', 'Vehicle Registration'])
+      expect(@facility_2.services).to eq([])
     end
   end
 
@@ -48,6 +49,7 @@ RSpec.describe Facility do
 
     it 'has a list of registered vehicles' do
       expect(@facility_1.registered_vehicles).to eq ([])
+      expect(@facility_2.registered_vehicles).to eq ([])
     end
 
     it 'keeps track of collected fees' do
@@ -59,7 +61,9 @@ RSpec.describe Facility do
       @facility_1.register_vehicle(@cruz)
       @facility_1.register_vehicle(@camero)
       @facility_1.register_vehicle(@bolt)
+      @facility_2.register_vehicle(@bolt)
       expect(@facility_1.registered_vehicles).to eq([@cruz, @camero, @bolt])
+      expect(@facility_2.registered_vehicles).to eq([])
     end
 
     it 'checks that fees are collected when a vehicle is registered' do
@@ -67,6 +71,7 @@ RSpec.describe Facility do
       @facility_1.collect_fee(@camaro)
       @facility_1.collect_fee(@bolt)
       expect(@facility_1.collected_fees).to eq(325)
+      expect(@facility_2.collected_fees).to eq(0)
     end
 
 
