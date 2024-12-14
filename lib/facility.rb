@@ -24,16 +24,19 @@ class Facility
 
     if @services.include?('Vehicle Registration')
       @registered_vehicles << vehicle
-      vehicle.registration_date
     end
 
-    if vehicle[:year] < 1999
-      @collect_fees += 25
-    elsif vehicle[:engine] == ev
-      @collect_fees += 200
-    else 
-      @collect_fees += 100
-    end
   end
   
+  def collect_fee(vehicle)
+    
+    if vehicle.year < 1999
+      @collected_fees += 25
+    elsif vehicle.engine == :ev
+      @collected_fees += 200
+    else 
+      @collected_fees += 100
+    end
+  end
+
 end

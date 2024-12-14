@@ -37,12 +37,20 @@ RSpec.describe Vehicle do
   describe 'registration details'do
     it 'can detect registration date'do
       @cruz.register
+      @camaro.register
+      @bolt.register
       expect(@cruz.registration_date).to eq(Date.today)
+      expect(@camaro.registration_date).to eq(Date.today)
+      expect(@bolt.registration_date).to eq(Date.today)
     end
 
     it 'can check vehicle plate type'do
       @cruz.register
+      @camaro.register
+      @bolt.register
       expect(@cruz.plate_type).to eq(:regular)
+      expect(@camaro.plate_type).to eq(:antique)
+      expect(@bolt.plate_type).to eq(:ev)
     end
 
 
