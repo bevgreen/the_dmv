@@ -6,7 +6,6 @@ RSpec.describe VehicleFactory do
 
     before(:each) do
         @factory = VehicleFactory.new
-        #vehicle = Vehicle.new({vin:'WBY8P8C51K', year: 2019, make: 'BMW', model: 'i3', engine: :ev} )
     end
 
     describe '#initialize' do
