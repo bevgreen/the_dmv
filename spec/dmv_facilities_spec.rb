@@ -12,7 +12,7 @@ RSpec.describe DMVFacilities do
         end
     end 
 
-    describe 'creates colorado facilities' do
+    describe '#creates colorado facilities' do
         it 'can create colorado facilities' do
             co_dmv_office_locations = DmvDataService.new.co_dmv_office_locations
             @facility.create_facilities(co_dmv_office_locations)
@@ -22,7 +22,7 @@ RSpec.describe DMVFacilities do
         end
     end
 
-    describe 'creates new york facilities' do
+    describe '#creates new york facilities' do
         it 'can create new york facilities' do
             ny_dmv_office_locations = DmvDataService.new.ny_dmv_office_locations
             @facility.create_facilities(ny_dmv_office_locations)
@@ -32,7 +32,7 @@ RSpec.describe DMVFacilities do
         end
     end
     
-    describe 'creates missouri facilities' do
+    describe '#creates missouri facilities' do
         it 'can create missouri facilities' do
             mo_dmv_office_locations = DmvDataService.new.mo_dmv_office_locations
             @facility.create_facilities(mo_dmv_office_locations)

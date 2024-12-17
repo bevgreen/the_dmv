@@ -128,7 +128,7 @@ RSpec.describe Facility do
     end
   end
 
-  describe 'renew license'do 
+  describe '#renew license'do 
     it 'checks facility for renew license service' do
       expect(@facility_1.renew_drviers_license(@registrant_1)).to eq(false)
     end

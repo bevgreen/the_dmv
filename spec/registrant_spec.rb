@@ -7,7 +7,7 @@ RSpec.describe Registrant do
         @registrant_3 = Registrant.new('Tucker', 15 )
     end
 
-    describe 'initialize'do 
+    describe '#initialize'do 
         it 'can initialize' do
         expect(@registrant_1). to be_an_instance_of(Registrant)
         expect(@registrant_2). to be_an_instance_of(Registrant)
@@ -15,7 +15,7 @@ RSpec.describe Registrant do
         end
     end
 
-    describe 'registrant data' do
+    describe '#registrant data' do
         it 'can store names'do
             expect(@registrant_1.name). to eq("Bruce")
             expect(@registrant_2.name). to eq("Penny")
