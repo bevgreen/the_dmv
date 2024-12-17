@@ -6,7 +6,6 @@ RSpec.describe VehicleFactory do
 
     before(:each) do
         @factory = VehicleFactory.new
-        #vehicle = Vehicle.new({vin:'WBY8P8C51K', year: 2019, make: 'BMW', model: 'i3', engine: :ev} )
     end
 
     describe '#initialize' do
@@ -18,7 +17,7 @@ RSpec.describe VehicleFactory do
     describe 'creates vehicles' do
         it 'can create vehicles' do
             wa_ev_registrations = DmvDataService.new.wa_ev_registrations
-            created_vehicles = @factory.create_vehicles(wa_ev_registrations)
+            @factory.create_vehicles(wa_ev_registrations)
     
             expect(@factory.created_vehicles[0].vin).to eq('WBY8P8C51K')
             expect(@factory.created_vehicles[0].year).to eq('2019')

@@ -1,7 +1,7 @@
 class VehicleFactory 
     attr_reader :created_vehicles
     def initialize
-        # @created_vehicles = []
+        @created_vehicles = []
     end
 
     def create_vehicles(vehicle_data)
