@@ -1,4 +1,3 @@
-require 'pry'
 class Facility
   attr_reader :name, 
               :address, 
@@ -70,7 +69,5 @@ class Facility
       return false
     end
   end
-
-
 
 end

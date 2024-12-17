@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry'
 
 RSpec.describe Facility do
   before(:each) do
@@ -89,7 +88,6 @@ RSpec.describe Facility do
 
     it 'can administer a written test'do
       @facility_1.add_service('Written Test')
-      # @facility_1.administer_written_test(@registrant_1)
       expect(@facility_1.administer_written_test(@registrant_1)).to eq(true)
       expect(@registrant_1.license_data).to eq({:written =>true, :license =>false, :renewed =>false})
     end
@@ -112,7 +110,6 @@ RSpec.describe Facility do
     end
 
     it 'checks facility has road test service' do
-      # @facility_1.administer_road_test(@registrant_1)
       expect(@facility_1.administer_road_test(@registrant_1)).to eq(false)
     end
 
