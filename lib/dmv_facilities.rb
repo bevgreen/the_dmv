@@ -1,19 +1,19 @@
 class DMVFacilities
-    attr_reader :created_facilities
+    attr_reader :facilities
+
     def initialize
-        @created_facilities = []
+        @facilities = []
     end
     
     def create_facilities(facility_data)
-        @created_facilities = []
+        @facilities = []
         facility_data.each do |facility|
             new_facility = Facility.new({
-                :name => facility[:dmv_office],
-                :address => facility[:address_li],
-                :phone => facility[:phone]
+                :name => "#{facility[:dmv_office]}#{facility[:office_name]}#{facility[:name]}",
+                :address => "#{facility[:address_li]}#{facility[:street_address_line_1]}#{facility[:address1]} #{facility[:city]} #{facility[:state]} #{facility[:zip_code]}#{facility[:zipcode]}",
+                :phone => "#{facility[:phone]}#{facility[:public_phone_number]}"
             })
-            @created_facilities << new_facility
-            #binding.pry
+            @facilities << new_facility
         end
     end
 end

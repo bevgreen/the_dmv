@@ -15,7 +15,6 @@ class VehicleFactory
                 :engine => :ev
             })
             @created_vehicles << new_vehicle
-            binding.pry
         end
     end
 
