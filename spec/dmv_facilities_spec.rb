@@ -31,7 +31,7 @@ RSpec.describe DMVFacilities do
             expect(@facility.facilities[1].phone).to eq('5188283350')
         end
     end
-
+    
     describe 'creates missouri facilities' do
         it 'can create missouri facilities' do
             mo_dmv_office_locations = DmvDataService.new.mo_dmv_office_locations
