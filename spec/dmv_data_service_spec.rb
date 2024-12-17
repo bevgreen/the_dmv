@@ -42,4 +42,4 @@ RSpec.describe DmvDataService do
       expect(@dds.mo_dmv_office_locations.size).to be_an(Integer)
     end
   end
-end
+end       
